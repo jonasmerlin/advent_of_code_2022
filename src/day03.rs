@@ -24,6 +24,7 @@ fn find_common_char(str_1: &str, str_2: &str) -> Option<char> {
     None
 }
 
+// Can be replaced by <slice>.split_at()
 fn get_splits(string: &str) -> (&str, &str) {
     let middle_index = string.len() / 2;
 
@@ -45,7 +46,7 @@ fn find_common_char_between_three(str_1: &str, str_2: &str, str_3: &str) -> Opti
 fn part_1(input: &str) {
     let mut sum = 0;
     for line in input.lines() {
-        let (split_1, split_2) = get_splits(line);
+        let (split_1, split_2) = line.split_at(line.len() / 2);
         let common_char = find_common_char(split_1, split_2);
         match common_char {
             Some(character) => sum += get_score_for_char(character),
