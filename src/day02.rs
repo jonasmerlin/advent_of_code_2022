@@ -139,7 +139,7 @@ fn part_2(input: &str) {
 }
 
 fn main() {
-    let input = fs::read_to_string("./input_day02.txt").expect("Couldn't find file.");
+    let input = fs::read_to_string("../input/input_day02.txt").expect("Couldn't find file.");
 
     println!("{}", input.lines().collect::<Vec<&str>>().len());
 

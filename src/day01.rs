@@ -1,7 +1,7 @@
 use std::fs;
 
 fn main() {
-    let input = fs::read_to_string("./input.txt").expect("Couldn't find file.");
+    let input = fs::read_to_string("../input/input.txt").expect("Couldn't find file.");
 
     let mut running_sum = 0;
     let mut cals = Vec::new();
